@@ -1,38 +1,33 @@
-# django-todo
-A simple todo app built with django
+Project Plan :
 
-![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
-### Setup
-To get this repository, run the following command inside your git enabled terminal
-```bash
-$ git clone https://github.com/shreys7/django-todo.git
-```
-You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
+-installation of ubuntu 20.4 on the local machine
 
-Once you have downloaded django, go to the cloned repo directory and run the following command
+-installation of docker-engine on ubuntu 20.4
 
-```bash
-$ python manage.py makemigrations
-```
+-installation of minikube cluster and kubectl on ubuntu 20.4
 
-This will create all the migrations file (database migrations) required to run this App.
+-installation of Jenkins CI/CD pipeline tools on ubuntu 20.4
 
-Now, to apply this migrations run the following command
-```bash
-$ python manage.py migrate
-```
+-uploading todo-web (django-todo) application source code on the git hub repository.
 
-One last step and then our todo App will be live. We need to create an admin user to run this App. On the terminal, type the following command and provide username, password and email for the admin user
-```bash
-$ python manage.py createsuperuser
-```
+-configuring Jenkins and building jobs
 
-That was pretty simple, right? Now let's make the App live. We just need to start the server now and then we can start using our simple todo App. Start the server by following command
+-pushing todo-web app docker image on docker hub
 
-```bash
-$ python manage.py runserver
-```
+-creating a deployment.yaml file for Kubernetes cluster
 
-Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
+-creating node-port service.yaml for Kubernetes cluster
 
-Cheers and Happy Coding :)
+-kubectl apply -f deployment.yaml
+
+-kubectl apply -f service.yaml
+
+-kubectl get pods
+
+-kubectl get svc
+
+-minikube ssh
+
+-minikube service todo-service --url
+
+-browsing IP address with port from google chrome and logging into the todo-web app.
